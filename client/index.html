@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0xDe-Obfuscator - Advanced Security Analysis Tool</title>
+    <link rel="icon" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZmlsbD0iIzA2YjZkNCIgZD0iTTEyIDJMMTMuMDkgOC4yNkwyMCA5TDEzLjA5IDE1Ljc0TDEyIDIyTDEwLjkxIDE1Ljc0TDQgOUwxMC45MSA4LjI2TDEyIDJ6Ii8+PC9zdmc+">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Header -->
+        <header class="app-header">
+            <div class="header-content">
+                <div class="logo-section">
+                    <div class="logo-icon">
+                        <i class="fas fa-shield-virus"></i>
+                    </div>
+                    <div class="logo-text">
+                        <h1>0xDe-Obfuscator</h1>
+                        <span class="version-tag">v2.0 Professional</span>
+                    </div>
+                </div>
+                <div class="header-stats">
+                    <div class="stat-item">
+                        <span class="stat-value" id="totalAnalyzes">0</span>
+                        <span class="stat-label">Analyses</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-value">54+</span>
+                        <span class="stat-label">Techniques</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-value" id="secretsFound">0</span>
+                        <span class="stat-label">Secrets Found</span>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content Area -->
+        <main class="main-content">
+            <div class="welcome-section">
+                <h2>🛡️ Advanced Security Analysis Suite</h2>
+                <p class="welcome-text">Professional-grade tools for penetration testing, CTF competitions, and defensive security analysis.</p>
+                
+                <div class="modules-grid">
+                    <!-- Deobfuscator Module -->
+                    <div class="module-card" onclick="window.location.href='deobfuscator.html'">
+                        <div class="module-header">
+                            <div class="module-icon deobfuscator">
+                                <i class="fas fa-unlock-alt"></i>
+                            </div>
+                            <h3>Code Deobfuscator</h3>
+                        </div>
+                        <div class="module-description">
+                            <p>Decode and analyze obfuscated code using 54+ advanced techniques including Base64, XOR, JSFuck, and more.</p>
+                            <ul class="feature-list">
+                                <li>🔍 Auto-detection of encoding types</li>
+                                <li>⚡ Real-time secret scanning</li>
+                                <li>📊 Risk assessment and analysis</li>
+                                <li>🎯 Multi-layer deobfuscation</li>
+                            </ul>
+                        </div>
+                        <div class="module-footer">
+                            <span class="module-badge">54+ Techniques</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </div>
+                    </div>
+
+                    <!-- Web Crawler Module -->
+                    <div class="module-card" onclick="window.location.href='crawler.html'">
+                        <div class="module-header">
+                            <div class="module-icon crawler">
+                                <i class="fas fa-spider"></i>
+                            </div>
+                            <h3>Web Crawler</h3>
+                        </div>
+                        <div class="module-description">
+                            <p>Scan websites to discover JavaScript files and automatically detect secrets and vulnerabilities.</p>
+                            <ul class="feature-list">
+                                <li>🕷️ Intelligent JavaScript extraction</li>
+                                <li>🔑 Automatic secret detection</li>
+                                <li>📈 Risk-based classification</li>
+                                <li>💾 Bulk script analysis</li>
+                            </ul>
+                        </div>
+                        <div class="module-footer">
+                            <span class="module-badge">Live Scanning</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </div>
+                    </div>
+
+                    <!-- Secret Scanner Module -->
+                    <div class="module-card" onclick="window.location.href='secrets.html'">
+                        <div class="module-header">
+                            <div class="module-icon secrets">
+                                <i class="fas fa-key"></i>
+                            </div>
+                            <h3>Secret Scanner</h3>
+                        </div>
+                        <div class="module-description">
+                            <p>Dedicated secret detection engine for finding API keys, tokens, credentials, and sensitive data.</p>
+                            <ul class="feature-list">
+                                <li>🔐 50+ secret pattern detection</li>
+                                <li>🚨 Severity-based categorization</li>
+                                <li>📋 Export and reporting</li>
+                                <li>⚡ Instant analysis</li>
+                            </ul>
+                        </div>
+                        <div class="module-footer">
+                            <span class="module-badge">50+ Patterns</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Quick Actions -->
+                <div class="quick-actions">
+                    <h3>🚀 Quick Actions</h3>
+                    <div class="actions-grid">
+                        <button class="action-btn" onclick="window.location.href='deobfuscator.html'">
+                            <i class="fas fa-paste"></i>
+                            Analyze Code
+                        </button>
+                        <button class="action-btn" onclick="window.location.href='crawler.html'">
+                            <i class="fas fa-globe"></i>
+                            Scan Website
+                        </button>
+                        <button class="action-btn" onclick="window.location.href='secrets.html'">
+                            <i class="fas fa-search"></i>
+                            Find Secrets
+                        </button>
+                        <button class="action-btn" onclick="showApiDocs()">
+                            <i class="fas fa-code"></i>
+                            API Documentation
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Features Overview -->
+                <div class="features-overview">
+                    <h3>🎯 Key Features</h3>
+                    <div class="features-grid">
+                        <div class="feature-item">
+                            <i class="fas fa-shield-alt"></i>
+                            <h4>Defensive Security</h4>
+                            <p>Designed exclusively for ethical security research and analysis</p>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-rocket"></i>
+                            <h4>High Performance</h4>
+                            <p>Fast processing with real-time feedback and analysis</p>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-cogs"></i>
+                            <h4>700+ Techniques</h4>
+                            <p>Comprehensive coverage of encoding and obfuscation methods</p>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-laptop-code"></i>
+                            <h4>Modern Interface</h4>
+                            <p>Professional, responsive design with dark theme</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Status Bar -->
+        <footer class="status-bar">
+            <div class="status-left">
+                <span class="status-indicator" id="statusIndicator"></span>
+                <span class="status-text" id="statusText">Ready</span>
+            </div>
+            <div class="status-right">
+                <span class="api-status" id="apiStatus">API: Checking...</span>
+                <span class="performance-info">GitHub Ready</span>
+            </div>
+        </footer>
+    </div>
+
+    <!-- API Documentation Modal -->
+    <div class="modal" id="apiModal" style="display: none;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3><i class="fas fa-code"></i> API Documentation</h3>
+                <button class="modal-close" onclick="closeApiDocs()">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <h4>🔗 Available Endpoints</h4>
+                <div class="api-endpoint">
+                    <strong>POST /api/deobfuscate</strong>
+                    <pre><code>{ "input": "ZXZhbCgiYWxlcnQoJ0hlbGxvJyk=", "options": {} }</code></pre>
+                </div>
+                <div class="api-endpoint">
+                    <strong>POST /api/secrets</strong>
+                    <pre><code>{ "input": "const apiKey = 'sk-1234567890abcdef';" }</code></pre>
+                </div>
+                <div class="api-endpoint">
+                    <strong>POST /api/crawl</strong>
+                    <pre><code>{ "url": "https://example.com", "options": {} }</code></pre>
+                </div>
+                <div class="api-endpoint">
+                    <strong>GET /api/status</strong>
+                    <p>Get server status and technique count</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Check API status on load
+        async function checkApiStatus() {
+            try {
+                const response = await fetch('/api/status');
+                const data = await response.json();
+                document.getElementById('apiStatus').textContent = `API: Online (${data.techniques} techniques)`;
+                document.getElementById('statusIndicator').style.background = 'var(--accent-success)';
+                document.getElementById('statusText').textContent = 'Ready';
+            } catch (error) {
+                document.getElementById('apiStatus').textContent = 'API: Offline';
+                document.getElementById('statusIndicator').style.background = 'var(--accent-danger)';
+                document.getElementById('statusText').textContent = 'Connection Error';
+            }
+        }
+
+        function showApiDocs() {
+            document.getElementById('apiModal').style.display = 'flex';
+        }
+
+        function closeApiDocs() {
+            document.getElementById('apiModal').style.display = 'none';
+        }
+
+        // Close modal on backdrop click
+        document.getElementById('apiModal').addEventListener('click', (e) => {
+            if (e.target.id === 'apiModal') {
+                closeApiDocs();
+            }
+        });
+
+        // Initialize
+        checkApiStatus();
+    </script>
+</body>
+</html>

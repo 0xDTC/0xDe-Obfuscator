@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Crawler - 0xDe-Obfuscator</title>
+    <link rel="icon" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZmlsbD0iIzA2YjZkNCIgZD0iTTEyIDJMMTMuMDkgOC4yNkwyMCA5TDEzLjA5IDE1Ljc0TDEyIDIyTDEwLjkxIDE1Ljc0TDQgOUwxMC45MSA4LjI2TDEyIDJ6Ii8+PC9zdmc+">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Header -->
+        <header class="app-header">
+            <div class="header-content">
+                <div class="logo-section">
+                    <div class="logo-icon">
+                        <i class="fas fa-spider"></i>
+                    </div>
+                    <div class="logo-text">
+                        <h1>Web Crawler</h1>
+                        <span class="version-tag">JavaScript Hunter</span>
+                    </div>
+                </div>
+                <div class="header-stats">
+                    <div class="stat-item">
+                        <span class="stat-value" id="pagesCount">0</span>
+                        <span class="stat-label">Pages</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-value" id="filesCount">0</span>
+                        <span class="stat-label">Scripts</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-value" id="crawlSecretsCount">0</span>
+                        <span class="stat-label">Secrets</span>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Navigation -->
+        <nav class="main-nav">
+            <div class="nav-container">
+                <div class="nav-tabs">
+                    <button class="nav-tab" onclick="window.location.href='index.html'">
+                        <i class="fas fa-home"></i>
+                        <span>Home</span>
+                    </button>
+                    <button class="nav-tab" onclick="window.location.href='deobfuscator.html'">
+                        <i class="fas fa-unlock-alt"></i>
+                        <span>Deobfuscator</span>
+                    </button>
+                    <button class="nav-tab active">
+                        <i class="fas fa-spider"></i>
+                        <span>Web Crawler</span>
+                    </button>
+                    <button class="nav-tab" onclick="window.location.href='secrets.html'">
+                        <i class="fas fa-key"></i>
+                        <span>Secret Scanner</span>
+                    </button>
+                </div>
+                <div class="nav-actions">
+                    <button class="btn-action" id="clearResultsBtn">
+                        <i class="fas fa-trash"></i>
+                    </button>
+                    <button class="btn-action" id="exportCrawlBtn">
+                        <i class="fas fa-download"></i>
+                    </button>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <div class="panel-layout">
+                <!-- Input Section -->
+                <div class="input-section">
+                    <div class="section-header">
+                        <h3><i class="fas fa-globe"></i> Website Crawler</h3>
+                    </div>
+                    <div class="crawler-controls">
+                        <div class="url-input-group">
+                            <input type="url" id="crawlUrl" placeholder="https://example.com" class="url-input">
+                            <button class="btn-primary" id="startCrawlBtn">
+                                <i class="fas fa-spider"></i>
+                                Start Crawl
+                            </button>
+                        </div>
+                        <div class="crawler-options">
+                            <div class="option-group">
+                                <h4>Crawl Options</h4>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" id="includeExternal" checked>
+                                    <span class="checkmark"></span>
+                                    External JavaScript
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" id="includeInline" checked>
+                                    <span class="checkmark"></span>
+                                    Inline Scripts
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" id="autoAnalyze">
+                                    <span class="checkmark"></span>
+                                    Auto-analyze Scripts
+                                </label>
+                            </div>
+                            <div class="option-group">
+                                <h4>Limits</h4>
+                                <div class="input-group">
+                                    <label>Max Files:</label>
+                                    <input type="number" id="maxFiles" value="20" min="1" max="100">
+                                </div>
+                                <div class="input-group">
+                                    <label>Timeout (s):</label>
+                                    <input type="number" id="timeout" value="10" min="5" max="60">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Progress Section -->
+                    <div class="crawl-progress" id="crawlProgress" style="display: none;">
+                        <div class="progress-header">
+                            <span class="progress-text" id="progressText">Initializing...</span>
+                            <button class="btn-danger btn-small" id="stopCrawlBtn">
+                                <i class="fas fa-stop"></i>
+                                Stop
+                            </button>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" id="progressFill"></div>
+                        </div>
+                        <div class="crawl-stats">
+                            <span>Scripts: <strong id="liveScriptCount">0</strong></span>
+                            <span>Secrets: <strong id="liveSecretCount">0</strong></span>
+                            <span>Errors: <strong id="errorCount">0</strong></span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Results Section -->
+                <div class="output-section">
+                    <div class="section-header">
+                        <h3><i class="fas fa-list"></i> Discovered Scripts</h3>
+                        <div class="filter-controls">
+                            <select id="riskFilter" class="control-select">
+                                <option value="all">All Risk Levels</option>
+                                <option value="high">High Risk</option>
+                                <option value="medium">Medium Risk</option>
+                                <option value="low">Low Risk</option>
+                            </select>
+                            <select id="typeFilter" class="control-select">
+                                <option value="all">All Types</option>
+                                <option value="external">External Scripts</option>
+                                <option value="inline">Inline Scripts</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="files-container" id="discoveredFiles">
+                        <div class="empty-state">
+                            <i class="fas fa-spider"></i>
+                            <p>Start crawling a website to discover JavaScript files</p>
+                            <div class="example-urls">
+                                <p>Try these examples:</p>
+                                <button class="example-btn" onclick="loadExample('https://httpbin.org')">httpbin.org</button>
+                                <button class="example-btn" onclick="loadExample('https://jsonplaceholder.typicode.com')">jsonplaceholder</button>
+                                <button class="example-btn" onclick="loadExample('https://reqres.in')">reqres.in</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Status Bar -->
+        <footer class="status-bar">
+            <div class="status-left">
+                <span class="status-indicator" id="statusIndicator"></span>
+                <span class="status-text" id="statusText">Ready to crawl</span>
+            </div>
+            <div class="status-right">
+                <span class="api-status" id="apiStatus">API: Connected</span>
+                <span class="performance-info" id="performanceInfo">Crawler: Ready</span>
+            </div>
+        </footer>
+    </div>
+
+    <script src="crawler.js"></script>
+</body>
+</html>

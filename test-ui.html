@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UI Test - 0xDe-Obfuscator</title>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="client/style.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Header -->
+        <header class="app-header">
+            <div class="header-content">
+                <div class="logo-section">
+                    <div class="logo-icon">
+                        <i class="fas fa-shield-virus"></i>
+                    </div>
+                    <div class="logo-text">
+                        <h1>0xDe-Obfuscator</h1>
+                        <span class="version-tag">v2.0 Professional</span>
+                    </div>
+                </div>
+                <div class="header-stats">
+                    <div class="stat-item">
+                        <span class="stat-value">127</span>
+                        <span class="stat-label">Analyses</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-value">54+</span>
+                        <span class="stat-label">Techniques</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-value">89</span>
+                        <span class="stat-label">Secrets Found</span>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Navigation -->
+        <nav class="main-nav">
+            <div class="nav-container">
+                <div class="nav-tabs">
+                    <button class="nav-tab active">
+                        <i class="fas fa-home"></i>
+                        <span>Home</span>
+                    </button>
+                    <button class="nav-tab">
+                        <i class="fas fa-unlock-alt"></i>
+                        <span>Deobfuscator</span>
+                    </button>
+                    <button class="nav-tab">
+                        <i class="fas fa-spider"></i>
+                        <span>Web Crawler</span>
+                    </button>
+                    <button class="nav-tab">
+                        <i class="fas fa-key"></i>
+                        <span>Secret Scanner</span>
+                    </button>
+                </div>
+                <div class="nav-actions">
+                    <button class="btn-action">
+                        <i class="fas fa-cog"></i>
+                    </button>
+                    <button class="btn-action">
+                        <i class="fas fa-download"></i>
+                    </button>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <div class="welcome-section">
+                <h2>🛡️ Advanced Security Analysis Suite</h2>
+                <p class="welcome-text">Professional-grade tools for penetration testing, CTF competitions, and defensive security analysis.</p>
+                
+                <div class="modules-grid">
+                    <!-- Deobfuscator Module -->
+                    <div class="module-card">
+                        <div class="module-header">
+                            <div class="module-icon deobfuscator">
+                                <i class="fas fa-unlock-alt"></i>
+                            </div>
+                            <h3>Code Deobfuscator</h3>
+                        </div>
+                        <div class="module-description">
+                            <p>Decode and analyze obfuscated code using 54+ advanced techniques including Base64, XOR, JSFuck, and more.</p>
+                            <ul class="feature-list">
+                                <li>🔍 Auto-detection of encoding types</li>
+                                <li>⚡ Real-time secret scanning</li>
+                                <li>📊 Risk assessment and analysis</li>
+                                <li>🎯 Multi-layer deobfuscation</li>
+                            </ul>
+                        </div>
+                        <div class="module-footer">
+                            <span class="module-badge">54+ Techniques</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </div>
+                    </div>
+
+                    <!-- Web Crawler Module -->
+                    <div class="module-card">
+                        <div class="module-header">
+                            <div class="module-icon crawler">
+                                <i class="fas fa-spider"></i>
+                            </div>
+                            <h3>Web Crawler</h3>
+                        </div>
+                        <div class="module-description">
+                            <p>Scan websites to discover JavaScript files and automatically detect secrets and vulnerabilities.</p>
+                            <ul class="feature-list">
+                                <li>🕷️ Intelligent JavaScript extraction</li>
+                                <li>🔑 Automatic secret detection</li>
+                                <li>📈 Risk-based classification</li>
+                                <li>💾 Bulk script analysis</li>
+                            </ul>
+                        </div>
+                        <div class="module-footer">
+                            <span class="module-badge">Live Scanning</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </div>
+                    </div>
+
+                    <!-- Secret Scanner Module -->
+                    <div class="module-card">
+                        <div class="module-header">
+                            <div class="module-icon secrets">
+                                <i class="fas fa-key"></i>
+                            </div>
+                            <h3>Secret Scanner</h3>
+                        </div>
+                        <div class="module-description">
+                            <p>Dedicated secret detection engine for finding API keys, tokens, credentials, and sensitive data.</p>
+                            <ul class="feature-list">
+                                <li>🔐 50+ secret pattern detection</li>
+                                <li>🚨 Severity-based categorization</li>
+                                <li>📋 Export and reporting</li>
+                                <li>⚡ Instant analysis</li>
+                            </ul>
+                        </div>
+                        <div class="module-footer">
+                            <span class="module-badge">50+ Patterns</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sample Secrets Summary -->
+                <div class="secrets-summary">
+                    <div class="summary-stat critical">
+                        <span class="stat-number">3</span>
+                        <span class="stat-label">Critical</span>
+                    </div>
+                    <div class="summary-stat high">
+                        <span class="stat-number">12</span>
+                        <span class="stat-label">High</span>
+                    </div>
+                    <div class="summary-stat medium">
+                        <span class="stat-number">7</span>
+                        <span class="stat-label">Medium</span>
+                    </div>
+                    <div class="summary-stat low">
+                        <span class="stat-number">2</span>
+                        <span class="stat-label">Low</span>
+                    </div>
+                </div>
+
+                <!-- Quick Actions -->
+                <div class="quick-actions">
+                    <h3>🚀 Quick Actions</h3>
+                    <div class="actions-grid">
+                        <button class="action-btn">
+                            <i class="fas fa-paste"></i>
+                            Analyze Code
+                        </button>
+                        <button class="action-btn">
+                            <i class="fas fa-globe"></i>
+                            Scan Website
+                        </button>
+                        <button class="action-btn">
+                            <i class="fas fa-search"></i>
+                            Find Secrets
+                        </button>
+                        <button class="action-btn">
+                            <i class="fas fa-code"></i>
+                            API Documentation
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Status Bar -->
+        <footer class="status-bar">
+            <div class="status-left">
+                <span class="status-indicator"></span>
+                <span class="status-text">Ready for analysis</span>
+            </div>
+            <div class="status-right">
+                <span class="api-status">API: Online (54 techniques)</span>
+                <span class="performance-info">GitHub Ready</span>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

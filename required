@@ -1,0 +1,700 @@
+Base64
+Base32
+Base16/Hexadecimal
+Base85/ASCII85
+URL encoding (percent encoding)
+HTML entity encoding
+Unicode escape sequences
+UTF-7 encoding
+UTF-16 encoding
+UTF-32 encoding
+Punycode
+ROT13/ROT47
+XOR cipher
+RC4
+AES encryption
+DES/3DES
+Blowfish
+Twofish
+RSA
+Binary representation
+Octal representation
+Decimal encoding
+JavaScript obfuscation
+JSFuck
+JJEncode
+AAEncode
+JSObfuscator patterns
+Whitespace encoding
+Zero-width character encoding
+Zero-width joiner/non-joiner
+Homoglyph substitution
+Leetspeak/1337
+Character substitution
+String splitting
+String concatenation obfuscation
+Array obfuscation
+Object property obfuscation
+Variable name obfuscation
+Function name obfuscation
+Control flow flattening
+Dead code injection
+Code virtualization
+Opaque predicates
+Anti-debugging techniques
+Anti-tampering methods
+Packing algorithms
+UPX packing
+ASPack
+Themida
+VMProtect
+Code Virtualizer
+Enigma Protector
+MPRESS
+PECompact
+FSG
+MEW
+Petite
+NsPack
+Polymorphic code
+Metamorphic code
+Self-modifying code
+Code encryption layers
+Runtime packers
+Compression algorithms (malicious use)
+DEFLATE
+GZIP
+ZLIB
+LZMA
+LZ4
+Brotli
+Custom compression
+Steganography in code
+LSB steganography
+Comment-based hiding
+Shellcode encoding
+Alphanumeric shellcode
+Unicode shellcode
+ASCII shellcode
+Printable shellcode
+Egg hunter encoding
+ROP chain obfuscation
+JOP chain obfuscation
+Return-oriented programming
+Jump-oriented programming
+Call-oriented programming
+String encryption
+API call obfuscation
+Import table obfuscation
+Export table obfuscation
+Resource encryption
+Certificate manipulation
+Time-based obfuscation
+Environment-based keys
+Hardware-based keys
+Domain generation algorithms
+Fast flux techniques
+DNS tunneling encoding
+HTTP parameter pollution
+Cookie obfuscation
+Header manipulation
+POST data encoding
+Multipart encoding abuse
+Chunked transfer encoding
+WebSocket obfuscation
+Protocol obfuscation
+Port knocking sequences
+Covert channels
+Timing channels
+Storage channels
+PowerShell encoding
+PowerShell compression
+PowerShell string manipulation
+Invoke-Obfuscation patterns
+Invoke-CradleCrafter
+Invoke-DOSfuscation
+Batch file obfuscation
+VBScript encoding
+VBScript.Encode
+Windows Script Encoder
+Macro obfuscation
+VBA stomping
+P-Code manipulation
+.NET obfuscation
+ConfuserEx patterns
+Dotfuscator patterns
+SmartAssembly patterns
+Crypto Obfuscator patterns
+Babel Obfuscator patterns
+Eazfuscator patterns
+Skater .NET patterns
+IL code manipulation
+Method proxy obfuscation
+Delegate obfuscation
+Lambda obfuscation
+LINQ obfuscation
+Reflection obfuscation
+Dynamic method generation
+Assembly embedding
+Resource embedding
+Native code wrapping
+P/Invoke obfuscation
+COM interop obfuscation
+Mixed mode assembly
+Anti-decompilation tricks
+Anti-disassembly tricks
+Anti-VM techniques
+Anti-sandbox techniques
+Anti-analysis techniques
+Debugger detection
+Breakpoint detection
+Hardware breakpoint detection
+Memory breakpoint detection
+Single-step detection
+Time measurement anti-debug
+Exception-based anti-debug
+Process hollowing
+Process doppelganging
+Process herpaderping
+Process ghosting
+Process reimaging
+DLL injection techniques
+SetWindowsHookEx injection
+CreateRemoteThread injection
+QueueUserAPC injection
+SetThreadContext injection
+NtCreateThreadEx injection
+Reflective DLL injection
+Manual mapping
+Thread hijacking
+Atom bombing
+PowerLoader injection
+Early bird injection
+KnownDlls cache poisoning
+Phantom DLL hollowing
+Module stomping
+Transacted hollowing
+Process camouflage
+Parent PID spoofing
+Command line spoofing
+Token manipulation
+SID spoofing
+Privilege escalation hiding
+Registry obfuscation
+Alternate data streams
+NTFS extended attributes
+Reparse point abuse
+Symbolic link abuse
+Directory junction abuse
+Hard link abuse
+Mount point abuse
+File system tunneling
+Short name abuse
+Case sensitivity bypass
+Path normalization bypass
+Double extension tricks
+RTLO (Right-to-Left Override)
+Unicode normalization abuse
+IDN homograph attacks
+CLSID abuse
+COM hijacking
+DLL search order hijacking
+Side-loading attacks
+Phantom DLL loading
+DLL proxying
+API hooking obfuscation
+IAT hooking
+EAT hooking
+Inline hooking
+VMT hooking
+SSDT hooking
+IDT hooking
+MSR hooking
+Page table manipulation
+Hypervisor-based hiding
+Bootkit techniques
+Rootkit hiding methods
+DKOM (Direct Kernel Object Manipulation)
+Driver signing bypass
+Certificate pinning bypass
+TLS callback abuse
+Exception handler abuse
+Vectored exception handling
+Structured exception handling
+Guard page abuse
+Memory permission manipulation
+DEP bypass techniques
+ASLR bypass techniques
+CFG bypass techniques
+CIG bypass techniques
+Code integrity bypass
+Protected process bypass
+PPL bypass techniques
+Credential dumping obfuscation
+Password hash manipulation
+Token impersonation
+Pass-the-hash obfuscation
+Pass-the-ticket obfuscation
+Golden ticket obfuscation
+Silver ticket obfuscation
+Kerberoasting obfuscation
+ASREPRoasting obfuscation
+DPAPI abuse
+Credential manager abuse
+LSA secrets extraction
+SAM database manipulation
+NTDS.dit extraction
+Volume shadow copy abuse
+WMI persistence
+Registry persistence
+Scheduled task hiding
+Service hiding
+Driver hiding
+Network hiding techniques
+Connection laundering
+Protocol tunneling
+ICMP tunneling
+DNS exfiltration encoding
+HTTP/S exfiltration
+FTP bounce attacks
+SMTP smuggling
+BGP hijacking
+Route manipulation
+ARP spoofing
+MAC spoofing
+IP spoofing
+TCP sequence prediction
+Session hijacking
+Cookie stealing obfuscation
+Form grabbing obfuscation
+Keylogger obfuscation
+Screen capture hiding
+Clipboard monitoring hiding
+Audio capture hiding
+Webcam capture hiding
+Data exfiltration encoding
+Compression before exfiltration
+Encryption before exfiltration
+Fragmentation techniques
+Chunking techniques
+Timing-based exfiltration
+Steganographic exfiltration
+QR code data hiding
+Barcode data hiding
+Image-based payloads
+Audio-based payloads
+Video-based payloads
+PDF malware obfuscation
+Office document obfuscation
+RTF obfuscation
+Flash/SWF obfuscation
+Java obfuscation
+Python obfuscation
+PyArmor patterns
+Pyobfuscate patterns
+Ruby obfuscation
+Perl obfuscation
+PHP obfuscation
+IonCube encoding
+Zend Guard encoding
+SourceGuardian encoding
+SQL obfuscation
+NoSQL injection encoding
+LDAP injection encoding
+XPath injection encoding
+XML external entity encoding
+Server-side includes abuse
+Template injection
+Expression language injection
+Command injection obfuscation
+Code injection hiding
+Memory injection techniques
+Browser exploit obfuscation
+Heap spray obfuscation
+Use-after-free hiding
+Buffer overflow hiding
+Format string hiding
+Integer overflow hiding
+Race condition exploitation
+TOCTOU exploitation
+Symbolic link attacks
+Path traversal encoding
+Local file inclusion hiding
+Remote file inclusion hiding
+PHP wrapper abuse
+Stream wrapper abuse
+Phar deserialization
+Java deserialization
+.NET deserialization
+Python pickle exploitation
+Ruby Marshal exploitation
+Node.js deserialization
+YAML deserialization
+JSON hijacking
+JSONP abuse
+CORS bypass techniques
+CSP bypass techniques
+XSS filter bypass
+WAF bypass encoding
+IDS/IPS evasion
+SIEM evasion
+EDR evasion
+Sandbox evasion
+Honeypot detection
+Red team tool hiding
+Living off the land
+LOLBins abuse
+LOLScripts abuse
+LOLLibs abuse
+Signed binary proxy
+Execution guardrails
+MSBuild abuse
+CMSTP bypass
+InstallUtil abuse
+Regsvcs/Regasm abuse
+Regsvr32 abuse
+Rundll32 abuse
+Odbcconf abuse
+Mshta abuse
+Msiexec abuse
+Certutil encoding
+Bitsadmin abuse
+Expand utility abuse
+Extrac32 abuse
+Makecab compression
+Forfiles abuse
+Pcalua abuse
+SyncAppvPublishingServer abuse
+Esentutl abuse
+Wmic encoding
+Scriptrunner abuse
+Tracker abuse
+Atbroker abuse
+Bginfo abuse
+Cdb abuse
+Coregen abuse
+Csi abuse
+Devtoolslauncher abuse
+Dnscmd abuse
+Fltmc abuse
+Fsi abuse
+Gfxdownloadwrapper abuse
+Ieexec abuse
+Infdefaultinstall abuse
+Mavinject abuse
+Mmc abuse
+Msconfig abuse
+Msdt abuse
+Msdeploy abuse
+Msxsl abuse
+Netsh abuse
+Openwith abuse
+Pcwutl abuse
+Pester abuse
+Presentationhost abuse
+Print abuse
+Provlaunch abuse
+Psr abuse
+Rasautou abuse
+Rdrleakdiag abuse
+Robocopy abuse
+Runonce abuse
+Runscripthelper abuse
+Sc abuse
+Schtasks obfuscation
+Scriptrunner abuse
+Settingsynchost abuse
+Stordiag abuse
+Ttdinject abuse
+Tttracer abuse
+Vbc abuse
+Vsjitdebugger abuse
+Wab abuse
+Winrm abuse
+Wlrmdr abuse
+Workfolders abuse
+Wsreset abuse
+Xwizard abuse
+AppInstaller abuse
+Aspnet_compiler abuse
+At abuse
+Bash abuse
+Cl_invocation abuse
+Cl_loadassembly abuse
+Cl_mutexverifiers abuse
+Cmd obfuscation
+Cmdkey abuse
+Csc abuse
+Cscript encoding
+Dfsvc abuse
+Diantz abuse
+Diskshadow abuse
+Dnx abuse
+Dotnet abuse
+Dxcap abuse
+Excel DDE abuse
+Finger abuse
+Gpscript abuse
+Hh abuse
+IMAPI COM abuse
+Jsc abuse
+Ldifde abuse
+Microsoft.Workflow abuse
+Msbuild inline tasks
+Msedge abuse
+Mspub abuse
+Pubprn abuse
+Rcsi abuse
+Remote.exe abuse
+Sqlite abuse
+Sqltoolsps abuse
+Te abuse
+Unregmp2 abuse
+Vbscript shell abuse
+Verclsid abuse
+Wsl abuse
+ClickOnce abuse
+Control panel item abuse
+Custom URI scheme abuse
+DotNetToJScript
+GadgetToJScript
+SharpShooter patterns
+SILENTTRINITY encoding
+Empire stager encoding
+Cobalt Strike encoding
+Metasploit encoding
+Shikata ga nai
+Call4 dword xor
+Alpha2 encoding
+Alpha mixed
+Buffalo overflow
+Countdown encoding
+Fnstenv mov
+Jmp/call additive
+Nonalpha encoding
+Nonupper encoding
+Printf encoding
+Pexfnstenvmov
+Pexfnstenvxor
+Pickalpha encoding
+Pexcall
+Pexfnstenv
+Unicorn encoding
+Donut shellcode
+SGN encoder
+Ebowla encoding
+Veil encoding patterns
+Hyperion crypter
+ScareCrow packer
+Amber packer
+Enigma packer
+Pepacker
+Kraken crypter
+Morphine packer
+Yoda crypter
+CryptExe
+ExeStealth
+Obsidium
+ACProtect
+Armadillo packer
+SVKP packer
+Shrinker packer
+PEBundle
+Molebox packer
+BoxedApp packer
+VMProtect packer
+Code Virtualizer
+Safengine
+ZProtect
+ExeCryptor
+SDProtector
+Krypton packer
+nPack packer
+Kkrunchy packer
+RLPack
+Packman
+ExeFog
+BurnOut packer
+BitCrypter
+Cryptic crypter
+DarkCrypter
+Heaven crypter
+Poison Ivy crypter
+Predator Pain crypter
+Aegis crypter
+Apocalypse crypter
+Cyborg crypter
+Galaxy crypter
+Ghost crypter
+Liberty crypter
+Medusa crypter
+Pandora crypter
+Plasma crypter
+Storm crypter
+Vertex crypter
+Zeus crypter
+Data Transform encoding
+FUD (Fully Undetectable) techniques
+Oligomorphic code
+Permutation engine
+Garbage code insertion
+Spaghetti code patterns
+Jump tables obfuscation
+Indirect branching
+Function inlining
+Loop unrolling obfuscation
+Constant folding tricks
+Expression substitution
+Boolean algebra obfuscation
+MBA (Mixed Boolean-Arithmetic)
+Arithmetic obfuscation
+Number theoretic transforms
+Polynomial encoding
+Matrix encoding
+Homomorphic encoding
+Lattice-based obfuscation
+Graph-based obfuscation
+Automata-based obfuscation
+Cellular automata encoding
+Genetic algorithm obfuscation
+Neural network obfuscation
+Quantum-inspired obfuscation
+Chaos-based encoding
+Fractal-based encoding
+Wavelet-based hiding
+Fourier transform hiding
+Discrete cosine transform
+Hadamard transform encoding
+Walsh-Hadamard transform
+Hilbert transform encoding
+Z-transform encoding
+Laplace transform encoding
+Gabor transform encoding
+Radon transform encoding
+Hough transform encoding
+Karhunen-Loève transform
+Independent component analysis
+Principal component analysis
+Singular value decomposition
+Non-negative matrix factorization
+Tensor decomposition
+Dictionary learning
+Sparse coding
+Compressed sensing
+Block cipher modes abuse
+Stream cipher patterns
+Hash function chains
+HMAC obfuscation
+Key derivation hiding
+Salt generation tricks
+IV manipulation
+Nonce reuse attacks
+Padding oracle hiding
+Side-channel hiding
+Cache timing hiding
+Power analysis countermeasures
+Electromagnetic hiding
+Acoustic cryptanalysis defense
+Differential fault analysis defense
+Glitch attack protection
+Cold boot attack defense
+Row hammer defense
+Spectre mitigation tricks
+Meltdown mitigation tricks
+Foreshadow defense
+MDS attack defense
+Load value injection defense
+CacheOut defense
+SGAxe defense
+CrossTalk defense
+RIDL defense
+ZombieLoad defense
+Store-to-leak defense
+Fill buffer defense
+TSX Asynchronous Abort defense
+L1D eviction sampling defense
+Vector register sampling defense
+Fast store forwarding defense
+Slow memory propagation defense
+String comparison timing defense
+Branch prediction defense
+BTB (Branch Target Buffer) poisoning
+RSB (Return Stack Buffer) manipulation
+BPU (Branch Prediction Unit) tricks
+Speculation barrier tricks
+Memory barrier tricks
+Fence instruction abuse
+Lock prefix abuse
+REP prefix tricks
+Segment override tricks
+Instruction prefix stacking
+ModR/M byte tricks
+SIB byte manipulation
+Displacement encoding tricks
+Immediate encoding tricks
+REX prefix manipulation
+VEX prefix tricks
+EVEX prefix tricks
+Legacy prefix abuse
+Mandatory prefix tricks
+Opcode escape sequences
+Multi-byte opcode tricks
+Undocumented opcodes
+Deprecated instruction abuse
+Co-processor instruction tricks
+FPU instruction hiding
+MMX instruction tricks
+SSE instruction hiding
+AVX instruction tricks
+AVX-512 tricks
+TSX instruction abuse
+SGX enclave hiding
+TDX tricks
+SEV hiding techniques
+SMM (System Management Mode) abuse
+UEFI implant techniques
+BIOS implant techniques
+ME (Management Engine) hiding
+PSP (Platform Security Processor) tricks
+TPM manipulation
+Secure Boot bypass
+Measured Boot manipulation
+Remote attestation bypass
+Hardware security module tricks
+Smart card manipulation
+USB token tricks
+Bluetooth hiding techniques
+NFC hiding techniques
+RFID manipulation
+Zigbee protocol tricks
+Z-Wave hiding
+LoRa obfuscation
+Sigfox hiding
+NB-IoT tricks
+LTE-M hiding
+5G protocol manipulation
+SDR (Software Defined Radio) tricks
+GNU Radio patterns
+HackRF techniques
+LimeSDR tricks
+PlutoSDR patterns
+USRP hiding techniques
+RTL-SDR tricks
+Spectrum spreading
+Frequency hopping patterns
+Time hopping patterns
+Direct sequence patterns
+Chirp spread patterns
+Ultra-wideband hiding
+MIMO techniques
+Beamforming tricks
+Spatial multiplexing
+Space-time coding
+Alamouti scheme
+Golden code
+Silver code
+Perfect code hiding
+Turbo code patterns
+LDPC patterns
+Polar code tricks
+Fountain code patterns

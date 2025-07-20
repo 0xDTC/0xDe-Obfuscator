@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Deobfuscator - 0xDe-Obfuscator</title>
+    <link rel="icon" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZmlsbD0iIzA2YjZkNCIgZD0iTTEyIDJMMTMuMDkgOC4yNkwyMCA5TDEzLjA5IDE1Ljc0TDEyIDIyTDEwLjkxIDE1Ljc0TDQgOUwxMC45MSA4LjI2TDEyIDJ6Ii8+PC9zdmc+">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-dark.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Header -->
+        <header class="app-header">
+            <div class="header-content">
+                <div class="logo-section">
+                    <div class="logo-icon">
+                        <i class="fas fa-unlock-alt"></i>
+                    </div>
+                    <div class="logo-text">
+                        <h1>Code Deobfuscator</h1>
+                        <span class="version-tag">54+ Techniques</span>
+                    </div>
+                </div>
+                <div class="header-stats">
+                    <div class="stat-item">
+                        <span class="stat-value" id="totalAnalyzes">0</span>
+                        <span class="stat-label">Analyses</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-value" id="secretsFound">0</span>
+                        <span class="stat-label">Secrets Found</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-value" id="iterations">0</span>
+                        <span class="stat-label">Iterations</span>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Navigation -->
+        <nav class="main-nav">
+            <div class="nav-container">
+                <div class="nav-tabs">
+                    <button class="nav-tab" onclick="window.location.href='index.html'">
+                        <i class="fas fa-home"></i>
+                        <span>Home</span>
+                    </button>
+                    <button class="nav-tab active">
+                        <i class="fas fa-unlock-alt"></i>
+                        <span>Deobfuscator</span>
+                    </button>
+                    <button class="nav-tab" onclick="window.location.href='crawler.html'">
+                        <i class="fas fa-spider"></i>
+                        <span>Web Crawler</span>
+                    </button>
+                    <button class="nav-tab" onclick="window.location.href='secrets.html'">
+                        <i class="fas fa-key"></i>
+                        <span>Secret Scanner</span>
+                    </button>
+                </div>
+                <div class="nav-actions">
+                    <button class="btn-action" id="clearAllBtn">
+                        <i class="fas fa-trash"></i>
+                    </button>
+                    <button class="btn-action" id="exportBtn">
+                        <i class="fas fa-download"></i>
+                    </button>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <div class="panel-layout">
+                <!-- Input Section -->
+                <div class="input-section">
+                    <div class="section-header">
+                        <h3><i class="fas fa-edit"></i> Input</h3>
+                        <div class="input-controls">
+                            <select id="languageSelect" class="control-select">
+                                <option value="auto">Auto-detect</option>
+                                <option value="javascript">JavaScript</option>
+                                <option value="python">Python</option>
+                                <option value="php">PHP</option>
+                                <option value="powershell">PowerShell</option>
+                                <option value="bash">Bash</option>
+                            </select>
+                            <select id="encodingSelect" class="control-select">
+                                <option value="auto">Auto-detect</option>
+                                <option value="base64">Base64</option>
+                                <option value="hex">Hexadecimal</option>
+                                <option value="url">URL Encoding</option>
+                                <option value="unicode">Unicode</option>
+                                <option value="rot13">ROT13</option>
+                                <option value="xor">XOR</option>
+                                <option value="jsfuck">JSFuck</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="input-container">
+                        <textarea id="codeInput" placeholder="Paste your obfuscated code here or drag & drop files..."></textarea>
+                        <div class="input-actions">
+                            <input type="file" id="fileUpload" multiple accept=".js,.py,.php,.ps1,.txt,.html,.css">
+                            <label for="fileUpload" class="file-upload-btn">
+                                <i class="fas fa-upload"></i>
+                                Upload Files
+                            </label>
+                            <button class="btn-secondary" id="pasteBtn">
+                                <i class="fas fa-paste"></i>
+                                Paste
+                            </button>
+                            <button class="btn-primary" id="deobfuscateBtn">
+                                <i class="fas fa-play"></i>
+                                Analyze
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Output Section -->
+                <div class="output-section">
+                    <div class="section-header">
+                        <h3><i class="fas fa-code"></i> Results</h3>
+                        <div class="output-controls">
+                            <button class="btn-icon" id="copyResultBtn" title="Copy to clipboard">
+                                <i class="fas fa-copy"></i>
+                            </button>
+                            <button class="btn-icon" id="beautifyBtn" title="Beautify code">
+                                <i class="fas fa-magic"></i>
+                            </button>
+                            <button class="btn-icon" id="downloadBtn" title="Download result">
+                                <i class="fas fa-download"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="output-container">
+                        <pre><code id="codeOutput" class="language-javascript"></code></pre>
+                    </div>
+                    
+                    <!-- Analysis Summary -->
+                    <div class="analysis-summary" id="analysisSummary" style="display: none;">
+                        <div class="summary-item">
+                            <span class="summary-label">Encoding Type:</span>
+                            <span class="summary-value" id="detectedEncoding">-</span>
+                        </div>
+                        <div class="summary-item">
+                            <span class="summary-label">Iterations:</span>
+                            <span class="summary-value" id="iterationCount">-</span>
+                        </div>
+                        <div class="summary-item">
+                            <span class="summary-label">Size Reduction:</span>
+                            <span class="summary-value" id="sizeReduction">-</span>
+                        </div>
+                        <div class="summary-item">
+                            <span class="summary-label">Risk Level:</span>
+                            <span class="summary-value risk-indicator" id="riskLevel">-</span>
+                        </div>
+                        <div class="summary-item">
+                            <span class="summary-label">Secrets Found:</span>
+                            <span class="summary-value" id="secretsCount">0</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Real-time Secrets Detection -->
+                    <div class="secrets-realtime" id="secretsRealtime" style="display: none;">
+                        <div class="section-header">
+                            <h4><i class="fas fa-key"></i> Detected Secrets</h4>
+                            <div class="secrets-stats">
+                                <span class="stat critical" id="realtimeCritical">0 Critical</span>
+                                <span class="stat high" id="realtimeHigh">0 High</span>
+                                <span class="stat medium" id="realtimeMedium">0 Medium</span>
+                                <span class="stat low" id="realtimeLow">0 Low</span>
+                            </div>
+                        </div>
+                        <div class="secrets-list" id="secretsList"></div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Status Bar -->
+        <footer class="status-bar">
+            <div class="status-left">
+                <span class="status-indicator" id="statusIndicator"></span>
+                <span class="status-text" id="statusText">Ready</span>
+            </div>
+            <div class="status-right">
+                <span class="api-status" id="apiStatus">API: Connected</span>
+                <span class="performance-info" id="performanceInfo">Memory: Good</span>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-core.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/autoloader/prism-autoloader.min.js"></script>
+    <script src="deobfuscator.js"></script>
+</body>
+</html>
